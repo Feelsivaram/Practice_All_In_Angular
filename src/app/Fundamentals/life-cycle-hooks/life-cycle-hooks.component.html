@@ -1,0 +1,34 @@
+<h4>
+    {{data}}
+</h4>
+
+
+<div class="form-group">
+    <input type="text" class="form-control" name="bind" [(ngModel)]="data">
+</div>
+
+<p><strong>ngOnChanges()</strong> - Respond when Angular (re)sets data-bound input properties. The method receives a
+    SimpleChanges object of current and previous property values.</p>
+
+<p><strong>ngOnInit()</strong> - Initialize the directive/component after Angular first displays the data-bound
+    properties and sets the directive/component's input properties.</p>
+
+<p><strong>ngDoCheck()</strong> - Detect and act upon changes that Angular can't or won't detect on its own.</p>
+
+<p><strong>ngAfterContentInit()</strong> - Respond after Angular projects external content into the component's view /
+    the view that a directive is in.</p>
+
+<p><strong>ngAfterContentChecked()</strong> - Respond after Angular checks the content projected into the
+    directive/component.</p>
+
+<p><strong>ngAfterViewInit()</strong> - Respond after Angular initializes the component's views and child views / the
+    view that a directive is in.</p>
+
+<p><strong>ngAfterViewChecked()</strong> - Respond after Angular checks the component's views and child views / the view
+    that a directive is in.</p>
+
+<p><strong>ngOnDestroy()</strong> - Cleanup just before Angular destroys the directive/component. Unsubscribe
+    Observables and detach event handlers to avoid memory leaks.</p>
+
+<p><strong>@HostListener()</strong> - ngOnDestroy is not called when the user refreshes the page or closes the browser.
+    So, in case you need to handle some cleanup logic on those occasions as well, you can use the HostListener</p>

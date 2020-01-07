@@ -1,0 +1,17 @@
+<h3>Routing details</h3>
+<p>Step 1) We need to implement <b>import RouterModule from '@angular/router'</b> in
+    <b>app.module.ts</b> file. So, that
+    we
+    can navigate the pages.</p>
+<p>Step 2) We need to implement <b>router-outlet</b> tag in HTML pages where the child pages need to
+    navigate/implements.</p>
+<p>Step 3) Add <b>routerLink</b> attribute where the page should navigate in HTML tags. (ex: routerLink="Home")</p>
+
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li routerLinkActive="active"><a routerLink="NestedRoute">Nested Route</a></li>
+        <li routerLinkActive="active"><a (click)="navigate('ChildRoute')">Child Route</a></li>
+    </ul>
+    <br>
+    <router-outlet></router-outlet>
+</div>
