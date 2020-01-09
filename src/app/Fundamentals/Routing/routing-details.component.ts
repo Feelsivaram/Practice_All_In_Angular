@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class RoutingDetailsComponent {
 
+  ngStyleOptions = {
+    'cursor': 'pointer'
+  }
+
   constructor(private route: Router) { }
 
   navigate(navigation: string) {

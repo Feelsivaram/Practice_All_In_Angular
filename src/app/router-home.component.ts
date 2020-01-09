@@ -6,84 +6,44 @@ import { Router } from '@angular/router';
   template: `
     <div class="panel-group" id="accordion">
       <div class="panel panel-default">
-        <div class="panel-heading" (click)="togglePanel(1)">
+        <div class="panel-heading" routerLink="Data-Binding">
           <h4 class="panel-title">Two Way Data Binding / Data Binding</h4>
-        </div>
-        <div id="collapse1" class="panel-collapse collapse">
-          <div class="panel-body">
-            <my-data-binding></my-data-binding>
-          </div>
         </div>
       </div>
       <div class="panel panel-default">
         <div class="panel-heading" routerLink="Components">
           <h4 class="panel-title">Components</h4>
         </div>
-        <!-- <div id="collapse2" class="panel-collapse collapse">
-          <div class="panel-body">
-            <my-components></my-components>
-          </div>
-        </div> -->
       </div>
       <div class="panel panel-default">
         <div class="panel-heading" routerLink="Event-Binding">
           <h4 class="panel-title">Event Binding</h4>
         </div>
-        <!-- <div id="collapse3" class="panel-collapse collapse">
-          <div class="panel-body">
-            <my-event-binding></my-event-binding>
-          </div>
-        </div> -->
       </div>
       <div class="panel panel-default">
         <div class="panel-heading" routerLink="Life-Cycle-Hooks">
           <h4 class="panel-title">Life Cycle Hooks</h4>
         </div>
-        <!-- <div id="collapse4" class="panel-collapse collapse">
-          <div class="panel-body">
-            <my-life-cycle-hooks></my-life-cycle-hooks>
-          </div>
-        </div> -->
       </div>
       <div class="panel panel-default">
         <div class="panel-heading" routerLink="Directives">
           <h4 class="panel-title">Directives</h4>
         </div>
-        <!-- <div id="collapse5" class="panel-collapse collapse">
-          <div class="panel-body">
-            <my-types-of-directives></my-types-of-directives>
-          </div>
-        </div> -->
       </div>
       <div class="panel panel-default">
         <div class="panel-heading" routerLink="Services">
           <h4 class="panel-title">Services</h4>
         </div>
-        <!-- <div id="collapse6" class="panel-collapse collapse">
-          <div class="panel-body">
-            <my-custom-service></my-custom-service>
-          </div>
-        </div> -->
       </div>
       <div class="panel panel-default">
         <div class="panel-heading" routerLink="Http-methods">
           <h4 class="panel-title">Http Requests</h4>
         </div>
-        <!-- <div id="collapse7" class="panel-collapse collapse">
-          <div class="panel-body">
-            <my-http-methods></my-http-methods>
-          </div>
-        </div> -->
       </div>
       <div class="panel panel-default">
         <div class="panel-heading" routerLink="Routing">
           <h4 class="panel-title">Routing</h4>
         </div>
-        <!-- <div id="collapse8" class="panel-collapse collapse">
-          <div class="panel-body">
-            <my-routing-details></my-routing-details>
-          </div>
-        </div> -->
       </div>
     </div>
   `,
@@ -116,7 +76,7 @@ export class RouterHomeComponent {
       }
     }
     this.toggle = !this.toggle;
-
+    this.route.navigate(['Home']);
   }
 
 }

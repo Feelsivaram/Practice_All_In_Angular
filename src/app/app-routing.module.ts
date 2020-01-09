@@ -26,10 +26,13 @@ import { ClassComponentComponent } from './Fundamentals/Components/class-compone
 import { TagComponentComponent } from './Fundamentals/components/tag-component.component';
 import { AttributeComponentComponent } from './Fundamentals/components/attribute-component.component';
 import { BaseRoutingComponent } from './Fundamentals/base-routing.component';
+import { AttributeDirectiveComponent } from './Fundamentals/Directives/attribute-directive.component';
+import { StructuralDirectiveComponent } from './Fundamentals/Directives/structural-directive.component';
 
 const route: Routes = [
     { path: '', redirectTo: '/Home', pathMatch: 'full' },
     { path: 'Home', component: BaseRoutingComponent },
+    { path: 'Data-Binding', component: DataBindingComponent },
     { path: 'Components', component: ComponentsComponent },
     { path: 'Event-Binding', component: EventBindingComponent },
     { path: 'Life-Cycle-Hooks', component: LifeCycleHooksComponent },
@@ -78,5 +81,7 @@ export const routingComponents = [
     ClassComponentComponent,
     TagComponentComponent,
     AttributeComponentComponent,
-    BaseRoutingComponent
+    BaseRoutingComponent,
+    AttributeDirectiveComponent,
+    StructuralDirectiveComponent
 ];

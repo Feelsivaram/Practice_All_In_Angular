@@ -3,8 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-data-binding',
   template: `
-    <pre>Note: If you want to use <strong>"ngModel"</strong> in the forms you need to declare <strong>"FormsModule"</strong> in <strong>"app.module.ts"</strong> file as <strong>"imports"</strong> <br>
-      Binding Effect Here : {{ binding }}
+    <pre>Note: If you want to use <strong>"ngModel"</strong> in the forms you need to declare <strong>"FormsModule"</strong> in <strong>"app.module.ts"</strong> file as <strong>"imports"</strong><br>Binding Effect Here : {{ binding }}
     </pre>
     <div class="form-group">
       <input type="text" class="form-control" name="bind" [(ngModel)]="binding">
