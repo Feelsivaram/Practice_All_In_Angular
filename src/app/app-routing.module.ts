@@ -28,6 +28,7 @@ import { AttributeComponentComponent } from './Fundamentals/components/attribute
 import { BaseRoutingComponent } from './Fundamentals/base-routing.component';
 import { AttributeDirectiveComponent } from './Fundamentals/Directives/attribute-directive.component';
 import { StructuralDirectiveComponent } from './Fundamentals/Directives/structural-directive.component';
+import { RouteEventsComponent } from './Fundamentals/Routing/route-events.component';
 
 const route: Routes = [
     { path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -42,6 +43,8 @@ const route: Routes = [
     {
         path: 'Routing', component: RoutingDetailsComponent,
         children: [
+            { path: '', redirectTo: '/Routing/Router-Events', pathMatch: 'full' },
+            { path: 'Router-Events', component: RouteEventsComponent },
             { path: 'NestedRoute', component: ChildRoutingDetailsComponent }
         ]
     },
@@ -83,5 +86,6 @@ export const routingComponents = [
     AttributeComponentComponent,
     BaseRoutingComponent,
     AttributeDirectiveComponent,
-    StructuralDirectiveComponent
+    StructuralDirectiveComponent,
+    RouteEventsComponent
 ];

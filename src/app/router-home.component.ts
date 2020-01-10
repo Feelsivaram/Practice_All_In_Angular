@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
     <div class="panel-group" id="accordion">
       <div class="panel panel-default">
         <div class="panel-heading" routerLink="Data-Binding">
-          <h4 class="panel-title">Two Way Data Binding / Data Binding</h4>
+          <h4 class="panel-title">Two Way Data Binding</h4>
         </div>
       </div>
       <div class="panel panel-default">

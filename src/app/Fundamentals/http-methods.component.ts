@@ -9,7 +9,8 @@ import { Subscription } from 'rxjs';
       Http request 
     </h3>
     <p>Below are the user details from http <strong>GET</strong> request</p>
-    <p *ngFor="let user of users">Username : {{ user.name }}</p>
+    <p *ngFor="let user of users | slice: 0:3">Username : {{ user.name }}</p>
+    <p><b>Note : Make sure to destroy every request in "ngOnDestroy"</b></p>
     <!-- <pre>{{ users | json}}</pre> -->
   `,
   styles: []
