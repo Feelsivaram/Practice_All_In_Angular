@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // imports
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // providers
@@ -11,15 +10,16 @@ import { HttpServiceService, HttpUrls } from './Fundamentals/Services/http-servi
 
 // declarations
 import { AppComponent } from './app.component';
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { RouterHomeComponent } from './router-home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    routingComponents
+    AppComponent,
+    RouterHomeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

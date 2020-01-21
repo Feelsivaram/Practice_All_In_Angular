@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 // Child Route modules
-import { ChildRoutingModule, childRouteComponents } from './Fundamentals/Routing/child-routing.module';
+import { ChildRoutingModule } from './Fundamentals/Routing/child-routing.module';
 
 // declarations
-import { AppComponent } from './app.component';
 import { ForloopComponent } from './Fundamentals/components/forloop.component';
 import { EventBindingComponent } from './Fundamentals/components/event-binding.component';
 import { DataBindingComponent } from './Fundamentals/components/data-binding.component';
@@ -19,7 +20,6 @@ import { HttpMethodsComponent } from './Fundamentals/http-methods.component';
 import { RoutingDetailsComponent } from './Fundamentals/Routing/routing-details.component';
 import { HomeRouteComponent } from './Fundamentals/Routing/home-route.component';
 import { PageNotFoundComponent } from './Fundamentals/Routing/page-not-found.component';
-import { RouterHomeComponent } from './router-home.component';
 import { ChildRoutingDetailsComponent } from './Fundamentals/Routing/child-routing-details.component';
 import { ComponentsComponent } from './Fundamentals/components/components.component';
 import { ClassComponentComponent } from './Fundamentals/Components/class-component.component';
@@ -43,7 +43,7 @@ const route: Routes = [
     {
         path: 'Routing', component: RoutingDetailsComponent,
         children: [
-            { path: '', redirectTo: '/Routing/Router-Events', pathMatch: 'full' },
+            { path: '', redirectTo: 'Router-Events', pathMatch: 'full' },
             { path: 'Router-Events', component: RouteEventsComponent },
             { path: 'NestedRoute', component: ChildRoutingDetailsComponent }
         ]
@@ -56,36 +56,30 @@ const route: Routes = [
         RouterModule.forRoot(route),
         ChildRoutingModule
     ],
-    exports: [RouterModule],
-    declarations: []
+    exports: [RouterModule, ChildRoutingModule, CommonModule],
+    declarations: [
+        ForloopComponent,
+        EventBindingComponent,
+        DataBindingComponent,
+        LifeCycleHooksComponent,
+        TypesOfDirectivesComponent,
+        CustomDirectiveDirective,
+        ClassDirectiveDirective,
+        ElementNameDirectiveDirective,
+        CustomServiceComponent,
+        HttpMethodsComponent,
+        RoutingDetailsComponent,
+        HomeRouteComponent,
+        PageNotFoundComponent,
+        ComponentsComponent,
+        ClassComponentComponent,
+        TagComponentComponent,
+        AttributeComponentComponent,
+        BaseRoutingComponent,
+        AttributeDirectiveComponent,
+        StructuralDirectiveComponent,
+        RouteEventsComponent
+    ]
 })
 
 export class AppRoutingModule { }
-
-export const routingComponents = [
-    AppComponent,
-    ForloopComponent,
-    EventBindingComponent,
-    DataBindingComponent,
-    LifeCycleHooksComponent,
-    TypesOfDirectivesComponent,
-    CustomDirectiveDirective,
-    ClassDirectiveDirective,
-    ElementNameDirectiveDirective,
-    CustomServiceComponent,
-    HttpMethodsComponent,
-    RoutingDetailsComponent,
-    RouterHomeComponent,
-    HomeRouteComponent,
-    PageNotFoundComponent,
-    ChildRoutingDetailsComponent,
-    childRouteComponents,
-    ComponentsComponent,
-    ClassComponentComponent,
-    TagComponentComponent,
-    AttributeComponentComponent,
-    BaseRoutingComponent,
-    AttributeDirectiveComponent,
-    StructuralDirectiveComponent,
-    RouteEventsComponent
-];
