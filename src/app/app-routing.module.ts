@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-
 // Child Route modules
 import { ChildRoutingModule } from './Fundamentals/Routing/child-routing.module';
 

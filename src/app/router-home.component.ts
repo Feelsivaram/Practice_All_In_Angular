@@ -51,16 +51,6 @@ import { Router } from '@angular/router';
 })
 export class RouterHomeComponent {
 
-  // togglePanel(collapsePanel) {
-  //   var collapseBody = document.getElementsByClassName('collapse');
-  //   var i: number = 0;
-  //   while (i < collapseBody.length) {
-  //     collapseBody[i].classList.remove("in");
-  //     i++;
-  //   }
-  //   document.getElementById('collapse' + collapsePanel).classList.add('in');
-  // }
-
   toggle: boolean = false;
 
   constructor(private route: Router) { }

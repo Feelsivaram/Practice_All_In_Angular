@@ -9,11 +9,10 @@ export class HttpServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(url) {
+  getMethod(url) {
     return this.http.get(url);
   }
 }
-
 
 let protocal: string = "https://";
 let baseUrl: string = protocal + "jsonplaceholder.typicode.com/";

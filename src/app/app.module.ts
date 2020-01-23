@@ -3,15 +3,16 @@ import { NgModule } from '@angular/core';
 
 // imports
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 // providers
 import { CustomServiceService, CustomServiceClass } from './Fundamentals/Services/custom-service.service';
 import { HttpServiceService, HttpUrls } from './Fundamentals/Services/http-service.service';
+import { DataServiceService } from './Fundamentals/Services/data-service.service';
 
 // declarations
 import { AppComponent } from './app.component';
 import { RouterHomeComponent } from './router-home.component';
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
     CustomServiceService,
     CustomServiceClass,
     HttpServiceService,
+    DataServiceService,
     HttpUrls
   ],
   bootstrap: [AppComponent]
